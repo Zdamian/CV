@@ -1,10 +1,6 @@
 @import 'mixins/css3mixins';
 @import 'variables';
 
-body {
-	margin-top: 50px;
-}
-
 .business-header {
     height: auto;
     background: url('http://placehold.it/1920x1200') center center no-repeat scroll;
@@ -13,4 +9,9 @@ body {
 
 .jumbotron {
     margin-top: 30px;
+}
+
+.navbar {
+	margin-bottom: 0px;
+	border-radius: 0px;
 }
