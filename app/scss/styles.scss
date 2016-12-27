@@ -8,10 +8,16 @@
 }
 
 .jumbotron {
-    margin-top: 30px;
+    margin-top: 16px;
 }
 
 .navbar {
 	margin-bottom: 0px;
 	border-radius: 0px;
+	min-height: 40px;
+}
+
+.img-circle {
+	border: 2px solid white;
+    margin-top: 16px;
 }
