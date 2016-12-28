@@ -1,3 +1,139 @@
 @import 'mixins/css3mixins';
 @import 'variables';
 
+.well, .jumbotron {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.avatar {
+    background: url('http://placehold.it/400x400');
+    background-size: cover;
+    margin: 0 auto;
+    height: 260px;
+    width: 260px;
+    border-radius: 50%;
+    margin-top: 15px;
+}
+
+#Container {
+    width: 100%;
+    height: 693px;
+    position: relative;
+    overflow: hidden;
+}
+
+#Container video {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%,-50%);
+    z-index: -100;
+}
+
+.page-header {
+    border: none;
+}
+
+.hide {
+    display: none;
+}
+
+.active-btn-portfolio {
+    background-color: white !important;
+    color: #222 !important;
+}
+
+.body-page {
+    padding: 150px 0;
+}
+
+.nav-pills li a:hover {
+    background-color: #444;
+}
+
+.nav-pills li.active a, .nav-pills li.active a:focus, .nav-pills li.active a:hover {
+    background-color: $colorBorderActive;
+}
+
+.business-header {
+    height: 693px;
+    width: auto;
+
+    h1 {
+        font-family: 'Pacifico', cursive;
+        color: white;
+    }
+
+    p {
+        font-family: 'Courgette', cursive;
+        color: white;
+    }
+}
+
+.navbar {
+    margin-bottom: 0px;
+    border-radius: 0px;
+    min-height: 40px;
+
+    a {
+       font-family: 'Courgette', cursive;
+       color: white;
+       font-size: 18px; 
+    }
+}
+
+h2, h3 {
+    font-family: 'Courgette', cursive;
+}
+
+h3 {
+    margin-top: 0px;
+}
+
+h2 {
+    border-bottom: 3px solid $colorBorderActive;
+}
+
+.skill-progress {
+
+    .progress {
+        margin-top: 10px;
+    }
+
+    p {
+        margin: 10px 0 10px;
+    }
+}
+
+.btn-group-justified {
+
+    button {
+        font-family: 'Courgette', cursive;
+        background-color: $backgroundFooterNavbar;
+        color: white;
+        font-size: 18px;  
+    }
+}
+
+.form-horizontal .form-group {
+    margin-left: 15px;
+}
+
+footer {
+    background-color: $backgroundFooterNavbar;
+
+    .glyphicon {
+        color: white;
+        font-size: 25px;
+        margin: 20px 0px;
+    }
+
+    p {
+       font-family: 'Courgette', cursive;
+       color: white;
+    }
+}
