@@ -11,10 +11,10 @@
         <header class="business-header">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-4 col-sm-offset-4">
+                    <div class="col-lg-4 col-lg-offset-4">
                         <img class="img-circle img-responsive" src="http://placehold.it/300x300">
                     </div>
-                    <div class="col-sm-12">
+                    <div class="col-lg-12">
                         <div class="jumbotron">
                             <h1 class="well">I'M Damian Zieliński</h1>
                             <p class="well">Design & Build Beautiful Crafted Web Experiences</p>
@@ -36,36 +36,33 @@
                     </button>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav nav-pills nav-justified">
-                        <li>
-                            <a href="#">Home</a>
+                    <ul class="nav nav-pills nav-justified" id="myTabs" role="tablist">
+                        <li role="presentation" class="active">
+                            <a href="#about" aria-controls="about" role="tab" data-toggle="tab">About</a>
                         </li>
-                        <li>
-                            <a href="#">About</a>
+                        <li role="presentation">
+                            <a href="#work" aria-controls="work" role="tab" data-toggle="tab">Work</a>
                         </li>
-                        <li>
-                            <a href="#">Work</a>
+                        <li role="presentation">
+                            <a href="#education" aria-controls="education" role="tab" data-toggle="tab">Education</a>
                         </li>
-                        <li>
-                            <a href="#">Education</a>
+                        <li role="presentation">
+                            <a href="#skills" aria-controls="skills" role="tab" data-toggle="tab">Skills</a>
                         </li>
-                        <li>
-                            <a href="#">Skills</a>
+                        <li role="presentation">
+                            <a href="#portfolio" aria-controls="portfolio" role="tab" data-toggle="tab">Portfolio</a>
                         </li>
-                        <li>
-                            <a href="#">Contact</a>
-                        </li>
-                        <li>
-                            <a href="#">Portfolio</a>
+                        <li role="presentation">
+                            <a href="#contact" aria-controls="contact" role="tab" data-toggle="tab">Contact</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- end of menu -->
-        <div class="container">
+        <div class="container tab-content">
         <!-- start of "About me" -->
-            <div class="row">
+            <div role="tabpanel" id="about" class="row tab-pane active">
                 <div class="col-lg-12">
                     <div class="page-header">
                         <h2>Damian Zieliński 
@@ -115,14 +112,14 @@
             </div>
         <!-- end of "About me" -->
         <!-- start of "Work" -->
-            <div class="row">
+            <div role="tabpanel" id="work" class="row tab-pane">
                 <div class="col-lg-12">
                     <h2>My Work</h2>
                 </div>
             </div>
         <!-- end of "Work" -->
         <!-- start of "Education" -->
-            <div class="row">
+            <div role="tabpanel" id="education" class="row tab-pane">
                 <div class="col-lg-12">
                     <h2>My Education</h2>
                 </div>
@@ -140,7 +137,7 @@
             </div>
         <!-- end of "Education" -->
         <!-- start of "My Skills" -->
-            <div class="row">
+            <div role="tabpanel" id="skills" class="row tab-pane">
                 <div class="col-lg-12">
                     <h2>My Skills</h2>
                     <small>My practical skills and knowledge</small>
@@ -247,8 +244,57 @@
                 </div>
             </div>
         <!-- end of "My Skills" -->
+        <!-- start of "Portfolio" -->
+            <div role="tabpanel" id="portfolio" class="row tab-pane">
+                <div class="col-lg-12">
+                   <h2>Portfolio</h2>
+                   <p>Showcase of my latest works</p>
+                </div>
+                <div class="col-lg-6 col-lg-offset-3">
+                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="app-btn-all btn btn-default">All</button>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="app-btn-drawings btn btn-default">Drawings</button>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="app-btn-renders btn btn-default">Renders</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-3 img-renders">
+                            <img class="img-responsive thumbnail" src="http://placehold.it/400x400">
+                        </div>
+                        <div class="col-lg-3 img-drawings">
+                            <img class="img-responsive thumbnail" src="http://placehold.it/300x300">
+                        </div>
+                        <div class="col-lg-3 img-renders">
+                            <img class="img-responsive thumbnail" src="http://placehold.it/400x400">
+                        </div>
+                        <div class="col-lg-3 img-drawings">
+                            <img class="img-responsive thumbnail" src="http://placehold.it/300x300">
+                        </div>
+                        <div class="col-lg-3 img-drawings">
+                            <img class="img-responsive thumbnail" src="http://placehold.it/300x300">
+                        </div>
+                        <div class="col-lg-3 img-renders">
+                            <img class="img-responsive thumbnail" src="http://placehold.it/400x400">
+                        </div>
+                        <div class="col-lg-3 img-drawings">
+                            <img class="img-responsive thumbnail" src="http://placehold.it/300x300">
+                        </div>
+                        <div class="col-lg-3 img-drawings">
+                            <img class="img-responsive thumbnail" src="http://placehold.it/300x300">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- end of "Portfolio" -->
         <!-- start of "Contact" -->
-            <div class="row">
+            <div role="tabpanel" id="contact" class="row tab-pane">
                 <div class="col-lg-5">
                     <h2>Contact Details</h2>
                     <address>
@@ -280,55 +326,6 @@
                 </div>
             </div>
         <!-- end of "Contact" -->
-        <!-- start of "Portfolio" -->
-            <div class="row">
-                <div class="col-lg-12">
-                   <h2>Portfolio</h2>
-                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco.</p>
-                </div>
-                <div class="col-lg-6 col-lg-offset-3">
-                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-default">All</button>
-                        </div>
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-default">Drawings</button>
-                        </div>
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-default">Renders</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <img class="img-responsive thumbnail" src="http://placehold.it/300x300">
-                        </div>
-                        <div class="col-lg-3">
-                            <img class="img-responsive thumbnail" src="http://placehold.it/300x300">
-                        </div>
-                        <div class="col-lg-3">
-                            <img class="img-responsive thumbnail" src="http://placehold.it/300x300">
-                        </div>
-                        <div class="col-lg-3">
-                            <img class="img-responsive thumbnail" src="http://placehold.it/300x300">
-                        </div>
-                        <div class="col-lg-3">
-                            <img class="img-responsive thumbnail" src="http://placehold.it/300x300">
-                        </div>
-                        <div class="col-lg-3">
-                            <img class="img-responsive thumbnail" src="http://placehold.it/300x300">
-                        </div>
-                        <div class="col-lg-3">
-                            <img class="img-responsive thumbnail" src="http://placehold.it/300x300">
-                        </div>
-                        <div class="col-lg-3">
-                            <img class="img-responsive thumbnail" src="http://placehold.it/300x300">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        <!-- end of "Portfolio" -->
         </div>
         <!-- start of footer -->
         <footer>
@@ -350,7 +347,9 @@
             </div>
         </footer>
         <!-- end of footer -->
+        <script src="/node_modules/underscore/underscore-min.js"></script>
         <script src="/node_modules/jquery/dist/jquery.min.js"></script>
         <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="/app/js/cv.js"></script>
     </body>
 </html>
