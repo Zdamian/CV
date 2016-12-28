@@ -1,23 +1,26 @@
 $(function() {
 
+    var $draw = $('.img-drawings');
+    var $render = $('.img-renders');
+
     $('.app-btn-renders').click(function() {
 
-        $('.img-drawings').hide();
-        $('.img-renders').show();
+        $draw.addClass('hide');
+        $render.removeClass('hide');
 
     });
 
     $('.app-btn-drawings').click(function() {
 
-        $('.img-renders').hide();
-        $('.img-drawings').show();
+        $render.addClass('hide');
+        $draw.removeClass('hide');
 
     });
 
     $('.app-btn-all').click(function() {
 
-        $('.img-renders').show();
-        $('.img-drawings').show();
+        $render.removeClass('hide');
+        $draw.removeClass('hide');
 
     });
 
