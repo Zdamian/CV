@@ -2,22 +2,37 @@ $(function() {
 
     var $draw = $('.img-drawings');
     var $render = $('.img-renders');
+    var $btnAll = $('.app-btn-all');
+    var $btnRender = $('.app-btn-renders');
+    var $btnDraw = $('.app-btn-drawings');
 
-    $('.app-btn-renders').click(function() {
+    $btnRender.on('click',function() {
+
+        $(this).addClass('active-btn-portfolio');
+        $btnDraw.removeClass('active-btn-portfolio');
+        $btnAll.removeClass('active-btn-portfolio');
 
         $draw.addClass('hide');
         $render.removeClass('hide');
 
     });
 
-    $('.app-btn-drawings').click(function() {
+    $btnDraw.on('click',function() {
+
+        $(this).addClass('active-btn-portfolio');
+        $btnRender.removeClass('active-btn-portfolio');
+        $btnAll.removeClass('active-btn-portfolio');
 
         $render.addClass('hide');
         $draw.removeClass('hide');
 
     });
 
-    $('.app-btn-all').click(function() {
+    $btnAll.on('click',function() {
+
+        $(this).addClass('active-btn-portfolio');
+        $btnDraw.removeClass('active-btn-portfolio');
+        $btnRender.removeClass('active-btn-portfolio');
 
         $render.removeClass('hide');
         $draw.removeClass('hide');

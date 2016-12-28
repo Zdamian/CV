@@ -42,8 +42,21 @@
     display: none;
 }
 
+.active-btn-portfolio {
+    background-color: white !important;
+    color: #222 !important;
+}
+
 .body-page {
     padding: 150px 0;
+}
+
+.nav-pills li a:hover {
+    background-color: #444;
+}
+
+.nav-pills li.active a, .nav-pills li.active a:focus, .nav-pills li.active a:hover {
+    background-color: $colorBorderActive;
 }
 
 .business-header {
@@ -77,12 +90,16 @@ h2, h3 {
     font-family: 'Courgette', cursive;
 }
 
+h3 {
+    margin-top: 0px;
+}
+
 h2 {
-    border-bottom: 1px solid blue;
+    border-bottom: 3px solid $colorBorderActive;
 }
 
 .skill-progress {
-    
+
     .progress {
         margin-top: 10px;
     }
@@ -113,7 +130,6 @@ footer {
         color: white;
         font-size: 25px;
         margin: 20px 0px;
-        padding: 0px 30px;
     }
 
     p {
