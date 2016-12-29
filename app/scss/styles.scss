@@ -34,31 +34,6 @@
     z-index: -100;
 }
 
-.video-play {
-    display: none;
-}
-
-.video {
-    position: relative;
-    overflow: hidden;
-
-    &:hover {
-        .video-play {
-            display: inline-block;
-        }
-    }
-}
-
-.video video {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 100%;
-    height: 100%;
-    transform: translate(-50%,-50%);
-    z-index: 100;
-}
-
 .page-header {
     border: none;
 }
@@ -91,6 +66,7 @@
     h1 {
         font-family: 'Pacifico', cursive;
         color: white;
+        text-shadow: 6px 6px 5px rgba(0, 0, 0, 0.9);
     }
 
     p {
@@ -151,14 +127,48 @@ h2 {
 footer {
     background-color: $backgroundFooterNavbar;
 
-    .glyphicon {
+    i {
         color: white;
-        font-size: 25px;
-        margin: 20px 0px;
+        font-size: 22px;
+
+        &:hover {
+            font-size: 21px;
+        }
     }
 
     p {
        font-family: 'Courgette', cursive;
        color: white;
+       border-top: 1px solid #222;
+       padding-top: 15px;
+    }
+
+    .bg-icon {
+        margin: 15px 0;
+        padding: 10px 0;
+    }
+
+    .icon-github:hover {
+        color: #444;
+    }
+
+    .icon-bitbucket:hover {
+        color: #093654;
+    }
+
+    .icon-facebook:hover {
+        color: #3b5998;
+    }
+
+    .icon-youtube:hover {
+        color: #C63619;
+    }
+
+    .icon-deviantart:hover {
+        color: green;
+    }
+
+    .icon-cube:hover {
+        color: #133783;
     }
 }

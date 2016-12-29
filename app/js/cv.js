@@ -45,14 +45,6 @@ $(function() {
 
     });
 
-    $video.on('mouseenter', function() {
-        $(this).append('<video id="vid" autoplay class="video-play"><source src="/app/images/fb.mp4" type="video/mp4"></video>');
-    });
-
-    $video.on('mouseleave', function() {
-        $(this).find('#vid').remove();
-    });
-
     $('#myTabs a').click(function(e) {
         e.preventDefault()
         $(this).tab('show')
