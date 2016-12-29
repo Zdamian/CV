@@ -6,6 +6,8 @@ $(function() {
     var $btnRender = $('.app-btn-renders');
     var $btnDraw = $('.app-btn-drawings');
 
+    var $video = $('.video');
+
     $btnRender.on('click',function() {
 
         $(this).addClass('active-btn-portfolio');
@@ -37,6 +39,14 @@ $(function() {
         $render.removeClass('hide');
         $draw.removeClass('hide');
 
+    });
+
+    $video.on('mouseenter', function() {
+        $(this).append('<video id="vid" autoplay class="video-play"><source src="/app/images/fb.mp4" type="video/mp4"></video>');
+    });
+
+    $video.on('mouseleave', function() {
+        $(this).find('#vid').remove();
     });
 
     $('#myTabs a').click(function(e) {
