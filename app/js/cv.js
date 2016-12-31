@@ -49,4 +49,17 @@ $(function() {
         e.preventDefault();
         $(this).tab('show');
     });
+
+    $('.app-btn-contact').on('click', function() {
+
+        $.ajax({
+            url: "/app/data/contact.json",
+            dataType: "JSON",
+            method: "GET",
+            success: function(response) {
+                console.log(response);
+            }
+        });
+
+    });
 });

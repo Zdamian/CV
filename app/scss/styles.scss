@@ -1,6 +1,10 @@
 @import 'mixins/css3mixins';
 @import 'variables';
 
+body {
+    background-color: #F9F9F9;
+}
+
 .well, .jumbotron {
     background: none;
     border: none;
@@ -15,6 +19,10 @@
     width: 260px;
     border-radius: 50%;
     margin-top: 15px;
+}
+
+.img-about {
+    margin-top: 20px;
 }
 
 #Container {
@@ -121,7 +129,7 @@ h2 {
 }
 
 .form-horizontal .form-group {
-    margin-left: 15px;
+    margin-left: 0;
 }
 
 footer {
@@ -171,4 +179,9 @@ footer {
     .icon-cube:hover {
         color: #133783;
     }
+}
+
+.icon-mobile {
+    font-size: 18px;
+    margin-left: -5px;
 }
