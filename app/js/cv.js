@@ -57,7 +57,8 @@ $(function() {
             dataType: "JSON",
             method: "GET",
             success: function(response) {
-                console.log(response);
+                $('.app-email').text(response.email);
+                $('.app-phone').text(response.phone);
             }
         });
 

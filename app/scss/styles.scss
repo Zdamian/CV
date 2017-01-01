@@ -12,7 +12,7 @@ body {
 }
 
 .avatar {
-    background: url('http://placehold.it/400x400');
+    background: url('/app/images/avatar.jpg');
     background-size: cover;
     margin: 0 auto;
     height: 260px;
@@ -107,6 +107,11 @@ h2 {
     border-bottom: 3px solid $colorBorderActive;
 }
 
+p {
+    font-family: 'Roboto Slab', serif;
+    text-indent: 25px;
+}
+
 .skill-progress {
 
     .progress {
@@ -130,6 +135,16 @@ h2 {
 
 .form-horizontal .form-group {
     margin-left: 0;
+}
+
+address {
+    strong {
+        margin-bottom: 20px;
+    }
+
+    div {
+        margin-bottom: 5px;
+    }
 }
 
 footer {
@@ -184,4 +199,8 @@ footer {
 .icon-mobile {
     font-size: 18px;
     margin-left: -5px;
+}
+
+.glyphicon-envelope {
+    padding-right: 5px;
 }
