@@ -1,6 +1,10 @@
 @import 'mixins/css3mixins';
 @import 'variables';
 
+body {
+    background-color: #F9F9F9;
+}
+
 .well, .jumbotron {
     background: none;
     border: none;
@@ -8,13 +12,17 @@
 }
 
 .avatar {
-    background: url('http://placehold.it/400x400');
+    background: url('/app/images/avatar.jpg');
     background-size: cover;
     margin: 0 auto;
     height: 260px;
     width: 260px;
     border-radius: 50%;
     margin-top: 15px;
+}
+
+.img-about {
+    margin-top: 20px;
 }
 
 #Container {
@@ -75,20 +83,24 @@
     }
 }
 
+.about-programer p {
+    margin: 0;
+}
+
 .navbar {
     margin-bottom: 0px;
     border-radius: 0px;
     min-height: 40px;
 
     a {
-       font-family: 'Courgette', cursive;
+       font-family: 'Roboto Slab', serif;
        color: white;
        font-size: 18px; 
     }
 }
 
 h2, h3 {
-    font-family: 'Courgette', cursive;
+    font-family: 'Roboto Slab', serif;
 }
 
 h3 {
@@ -97,6 +109,11 @@ h3 {
 
 h2 {
     border-bottom: 3px solid $colorBorderActive;
+}
+
+p {
+    font-family: 'Roboto Slab', serif;
+    text-indent: 25px;
 }
 
 .skill-progress {
@@ -113,7 +130,7 @@ h2 {
 .btn-group-justified {
 
     button {
-        font-family: 'Courgette', cursive;
+        font-family: 'Roboto Slab', serif;
         background-color: $backgroundFooterNavbar;
         color: white;
         font-size: 18px;  
@@ -121,7 +138,17 @@ h2 {
 }
 
 .form-horizontal .form-group {
-    margin-left: 15px;
+    margin-left: 0;
+}
+
+address {
+    strong {
+        margin-bottom: 20px;
+    }
+
+    div {
+        margin-bottom: 5px;
+    }
 }
 
 footer {
@@ -137,7 +164,7 @@ footer {
     }
 
     p {
-       font-family: 'Courgette', cursive;
+       font-family: 'Roboto Slab', serif;
        color: white;
        border-top: 1px solid #222;
        padding-top: 15px;
@@ -171,4 +198,13 @@ footer {
     .icon-cube:hover {
         color: #133783;
     }
+}
+
+.icon-mobile {
+    font-size: 18px;
+    margin-left: -5px;
+}
+
+.glyphicon-envelope {
+    padding-right: 5px;
 }

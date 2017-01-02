@@ -46,7 +46,21 @@ $(function() {
     });
 
     $('#myTabs a').click(function(e) {
-        e.preventDefault()
-        $(this).tab('show')
-    })
+        e.preventDefault();
+        $(this).tab('show');
+    });
+
+    $('.app-btn-contact').on('click', function() {
+
+        $.ajax({
+            url: "/app/data/contact.json",
+            dataType: "JSON",
+            method: "GET",
+            success: function(response) {
+                $('.app-email').text(response.email);
+                $('.app-phone').text(response.phone);
+            }
+        });
+
+    });
 });
