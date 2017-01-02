@@ -1,10 +1,6 @@
 @import 'mixins/css3mixins';
 @import 'variables';
 
-body {
-    background-color: #F9F9F9;
-}
-
 .well, .jumbotron {
     background: none;
     border: none;
@@ -42,30 +38,29 @@ body {
     z-index: -100;
 }
 
-.page-header {
-    border: none;
-}
-
 .hide {
     display: none;
 }
 
-.active-btn-portfolio {
-    background-color: white !important;
-    color: #222 !important;
-}
-
 .body-page {
     padding: 150px 0;
-    min-height: 665px;
+}
+
+.navbar-toggle {
+    width: 100%;
+    margin-right: 0;
+    color: white;
+    font-size: 19px;
 }
 
 .nav-pills li a:hover {
-    background-color: #444;
+    background-color: #333;
+    border-radius: 0;
 }
 
 .nav-pills li.active a, .nav-pills li.active a:focus, .nav-pills li.active a:hover {
-    background-color: $colorBorderActive;
+    background-color: $backgroundFooterNavbar;
+    border-radius: 0;
 }
 
 .business-header {
@@ -101,20 +96,136 @@ body {
 }
 
 h2, h3 {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 h3 {
     margin-top: 0px;
 }
 
-h2 {
-    border-bottom: 3px solid $colorBorderActive;
+p {
+    font-family: 'Open Sans', sans-serif;
 }
 
-p {
-    font-family: 'Roboto Slab', serif;
-    text-indent: 25px;
+.bg-about {
+    background-color: $backgroundAbout;
+
+    .header {
+        margin-bottom: 50px;
+
+        h2 {
+            margin-bottom: 10px;
+        }
+    }
+
+    h2, p {
+        font-family: 'Open Sans', sans-serif;
+        color: white;
+    }
+
+    h2 {
+        font-size: 42px;
+        margin-bottom: 50px;
+    }
+
+    h2 small {
+        font-size: 18px;
+        color: white;
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: 100;
+        color: white;
+    }
+}
+
+.bg-work, .bg-skills {
+
+    h2 {
+        font-weight: 600;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 18px;
+    }
+}
+
+.bg-education {
+    background-color: $backgroundEduPort;
+
+    h3, h2, p {
+        color: white;
+    }
+
+    h2 {
+        margin-bottom: 50px;
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+
+.bg-skills {
+
+    h3 {
+        font-weight: 400;
+    }
+}
+
+.bg-portfolio {
+    background-color: $backgroundAbout;
+
+    h2, p {
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    h2 {
+        font-weight: 600;
+    }
+
+    .thumbnail {
+        background: none;
+        border-radius: 0;
+        border: none;
+    }
+}
+
+.active-btn-portfolio {
+    background-color: #15596e !important;
+    border-color: #15596e;
+    color: white !important;
+}
+
+.bg-contact {
+
+    h2 {
+        font-weight: 600;
+    }
+
+    p, label {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .btn-primary {
+        background: none;
+        color: #15596e;
+        font-size: 18px;
+        border-radius: 0;
+        border-color: #15596e;
+
+        &:hover, &:active, &:focus {
+            color: white;
+            background-color: #15596e;
+            border-radius: 0;
+            border-color: #15596e;
+        }
+    }
 }
 
 .skill-progress {
@@ -132,9 +243,15 @@ p {
 
     button {
         font-family: 'Roboto Slab', serif;
-        background-color: $backgroundFooterNavbar;
+        background-color: $backgroundAbout;
         color: white;
-        font-size: 18px;  
+        font-size: 18px;
+
+        &:hover {
+            color: #15596e;
+            border-color: #15596e;
+            background: none;
+        } 
     }
 }
 
