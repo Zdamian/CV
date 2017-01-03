@@ -1,14 +1,39 @@
 @import 'mixins/css3mixins';
+@import 'mixins/rwd';
 @import 'variables';
 
 body {
-    background-color: #F9F9F9;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    font-size: 42px;
+    font-weight: 300;
+}
+
+h3 {
+    margin-top: 0px;
+    font-weight: 100;
+}
+
+p {
+    font-size: 24px;
+    font-weight: 100;
 }
 
 .well, .jumbotron {
     background: none;
     border: none;
     box-shadow: none;
+}
+
+.hide {
+    display: none;
+}
+
+.body-page {
+    padding: 100px 0;
 }
 
 .avatar {
@@ -19,10 +44,6 @@ body {
     width: 260px;
     border-radius: 50%;
     margin-top: 15px;
-}
-
-.img-about {
-    margin-top: 20px;
 }
 
 #Container {
@@ -42,30 +63,38 @@ body {
     z-index: -100;
 }
 
-.page-header {
-    border: none;
-}
-
-.hide {
-    display: none;
-}
-
 .active-btn-portfolio {
-    background-color: white !important;
-    color: #222 !important;
+    background-color: #15596e !important;
+    border-color: #15596e;
+    color: white !important;
+
 }
 
-.body-page {
-    padding: 150px 0;
-    min-height: 665px;
+.icon-mobile {
+    font-size: 18px;
+    margin-left: -5px;
+}
+
+.glyphicon-envelope {
+    padding-right: 5px;
+}
+
+.navbar-toggle {
+    width: 100%;
+    margin-right: 0;
+    color: white;
+    font-size: 19px;
 }
 
 .nav-pills li a:hover {
-    background-color: #444;
+    background-color: #333;
+    border-radius: 0;
+    transition: background-color 0.5s;
 }
 
 .nav-pills li.active a, .nav-pills li.active a:focus, .nav-pills li.active a:hover {
-    background-color: $colorBorderActive;
+    background-color: $backgroundFooterNavbar;
+    border-radius: 0;
 }
 
 .business-header {
@@ -73,7 +102,6 @@ body {
     width: auto;
 
     h1 {
-        font-family: 'Pacifico', cursive;
         color: white;
         text-shadow: 6px 6px 5px rgba(0, 0, 0, 0.9);
     }
@@ -84,76 +112,232 @@ body {
     }
 }
 
-.about-programer p {
-    margin: 0;
-}
-
 .navbar {
     margin-bottom: 0px;
     border-radius: 0px;
     min-height: 40px;
 
     a {
-       font-family: 'Roboto Slab', serif;
+       font-weight: 100;
        color: white;
        font-size: 18px; 
     }
 }
 
-h2, h3 {
-    font-family: 'Roboto Slab', serif;
-}
+.bg-about {
+    background-color: $backgroundAbout;
+    color: white;
 
-h3 {
-    margin-top: 0px;
-}
-
-h2 {
-    border-bottom: 3px solid $colorBorderActive;
-}
-
-p {
-    font-family: 'Roboto Slab', serif;
-    text-indent: 25px;
-}
-
-.skill-progress {
-
-    .progress {
-        margin-top: 10px;
-    }
-
-    p {
-        margin: 10px 0 10px;
-    }
-}
-
-.btn-group-justified {
-
-    button {
-        font-family: 'Roboto Slab', serif;
-        background-color: $backgroundFooterNavbar;
-        color: white;
-        font-size: 18px;  
-    }
-}
-
-.form-horizontal .form-group {
-    margin-left: 0;
-}
-
-address {
-    strong {
+    .img-circle {
+        border: 3px solid white;
         margin-bottom: 20px;
     }
 
-    div {
-        margin-bottom: 5px;
+    .about {
+        margin-bottom: 50px;
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        p, span {
+
+            @include respond-to(xl) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    h2 {
+        margin-bottom: 50px;
+
+        @include respond-to(xl) {
+            font-size: 32px;
+        }
+    }
+
+    span {
+        font-size: 18px;
+        color: white;
+        font-weight: 100;
+    }
+}
+
+.bg-work, .bg-skills {
+    background-color: #f5f5f5;
+
+    h2 {
+        @include respond-to(xl) {
+            font-size: 38px;
+        }
+    }
+
+    p {
+        font-weight: 300;
+        font-size: 24px;
+        color: #666;
+    }
+}
+
+.bg-work p {
+
+    @include respond-to(xl) {
+        font-size: 18px;
+    }
+}
+
+.bg-education {
+    background-color: $backgroundEduPort;
+    color: white;
+
+    h2 {
+        margin-bottom: 50px;
+
+        @include respond-to(xl) {
+            font-size: 38px;
+        }
+    }
+
+    p {
+        font-size: 18px;
+
+        @include respond-to(xl) {
+            font-size: 14px;
+        }
+    }
+
+    h3 {
+        @include respond-to(xl) {
+            font-size: 18px;
+        }
+    }
+}
+
+.bg-skills {
+
+    p {
+        @include respond-to(xl) {
+            font-size: 14px;
+        }
+    }
+
+    h3 {
+        font-weight: 400;
+
+        @include respond-to(xl) {
+            font-size: 22px;
+        }
+    }
+}
+
+.bg-portfolio {
+    background-color: $backgroundAbout;
+    color: white;
+
+    h2 {
+        @include respond-to(xl) {
+            font-size: 38px;
+        }
+    }
+
+    p {
+        @include respond-to(xl) {
+            font-size: 14px;
+        }
+    }
+
+    img {
+        margin-bottom: 25px;
+
+        &:hover {
+            box-shadow: 0 0 16px rgba(0,0,0,.9);
+            transition: box-shadow 0.5s;
+        }
+    }
+
+    .img-animations .panel-default {
+        border-radius: 0;
+
+        .panel-heading {
+            font-size: 16px;
+        }
+    }
+
+    .btn-group-justified {
+
+        .btn-group .btn {
+            width: 98%;
+        }
+
+        button {
+            background-color: $backgroundAbout;
+            color: white;
+            font-size: 18px;
+            font-weight: 300;
+            border-radius: 0;
+
+            @include respond-to(xl) {
+                font-size: 12px;
+            }
+
+            &:hover {
+                color: #15596e;
+                border-color: #15596e;
+                background: none;
+                transition: all 0.7s;
+            } 
+        }
+    }
+}
+
+.bg-contact {
+    background-color: #f5f5f5;
+
+    h2 {
+        @include respond-to(xl) {
+            font-size: 32px;
+        }
+    }
+
+    p, label {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .form-horizontal .form-group {
+        margin-left: 0;
+    }
+
+    address {
+        strong {
+            margin-bottom: 20px;
+        }
+
+        div {
+            margin-bottom: 5px;
+        }
+    }
+
+    .btn-primary {
+        background: none;
+        color: #15596e;
+        font-size: 18px;
+        border-radius: 0;
+        border-color: #15596e;
+
+        &:hover, &:active, &:focus {
+            color: white;
+            background-color: #15596e;
+            border-radius: 0;
+            border-color: #15596e;
+            transition: all 0.7s;
+        }
     }
 }
 
 footer {
     background-color: $backgroundFooterNavbar;
+    color: white;
 
     i {
         color: white;
@@ -161,14 +345,14 @@ footer {
 
         &:hover {
             font-size: 21px;
+            transition: font-size 0.1s;
         }
     }
 
     p {
-       font-family: 'Roboto Slab', serif;
-       color: white;
        border-top: 1px solid #222;
        padding-top: 15px;
+       font-size: 14px;
     }
 
     .bg-icon {
@@ -178,34 +362,31 @@ footer {
 
     .icon-github:hover {
         color: #444;
+        transition: all 0.7s;
     }
 
     .icon-bitbucket:hover {
         color: #093654;
+        transition: all 0.7s;
     }
 
     .icon-facebook:hover {
         color: #3b5998;
+        transition: all 0.7s;
     }
 
     .icon-youtube:hover {
         color: #C63619;
+        transition: all 0.7s;
     }
 
     .icon-deviantart:hover {
         color: green;
+        transition: all 0.7s;
     }
 
     .icon-cube:hover {
         color: #133783;
+        transition: all 0.7s;
     }
-}
-
-.icon-mobile {
-    font-size: 18px;
-    margin-left: -5px;
-}
-
-.glyphicon-envelope {
-    padding-right: 5px;
 }
