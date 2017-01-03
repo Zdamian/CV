@@ -28,6 +28,14 @@ p {
     box-shadow: none;
 }
 
+.hide {
+    display: none;
+}
+
+.body-page {
+    padding: 100px 0;
+}
+
 .avatar {
     background: url('/app/images/avatar.jpg');
     background-size: cover;
@@ -55,12 +63,20 @@ p {
     z-index: -100;
 }
 
-.hide {
-    display: none;
+.active-btn-portfolio {
+    background-color: #15596e !important;
+    border-color: #15596e;
+    color: white !important;
+
 }
 
-.body-page {
-    padding: 100px 0;
+.icon-mobile {
+    font-size: 18px;
+    margin-left: -5px;
+}
+
+.glyphicon-envelope {
+    padding-right: 5px;
 }
 
 .navbar-toggle {
@@ -246,13 +262,32 @@ p {
             font-size: 16px;
         }
     }
-}
 
-.active-btn-portfolio {
-    background-color: #15596e !important;
-    border-color: #15596e;
-    color: white !important;
+    .btn-group-justified {
 
+        .btn-group .btn {
+            width: 98%;
+        }
+
+        button {
+            background-color: $backgroundAbout;
+            color: white;
+            font-size: 18px;
+            font-weight: 300;
+            border-radius: 0;
+
+            @include respond-to(xl) {
+                font-size: 12px;
+            }
+
+            &:hover {
+                color: #15596e;
+                border-color: #15596e;
+                background: none;
+                transition: all 0.7s;
+            } 
+        }
+    }
 }
 
 .bg-contact {
@@ -269,6 +304,20 @@ p {
         font-weight: 400;
     }
 
+    .form-horizontal .form-group {
+        margin-left: 0;
+    }
+
+    address {
+        strong {
+            margin-bottom: 20px;
+        }
+
+        div {
+            margin-bottom: 5px;
+        }
+    }
+
     .btn-primary {
         background: none;
         color: #15596e;
@@ -283,46 +332,6 @@ p {
             border-color: #15596e;
             transition: all 0.7s;
         }
-    }
-}
-
-.btn-group-justified {
-
-    .btn-group .btn {
-        width: 98%;
-    }
-
-    button {
-        background-color: $backgroundAbout;
-        color: white;
-        font-size: 18px;
-        font-weight: 300;
-        border-radius: 0;
-
-        @include respond-to(xl) {
-            font-size: 12px;
-        }
-
-        &:hover {
-            color: #15596e;
-            border-color: #15596e;
-            background: none;
-            transition: all 0.7s;
-        } 
-    }
-}
-
-.form-horizontal .form-group {
-    margin-left: 0;
-}
-
-address {
-    strong {
-        margin-bottom: 20px;
-    }
-
-    div {
-        margin-bottom: 5px;
     }
 }
 
@@ -381,16 +390,3 @@ footer {
         transition: all 0.7s;
     }
 }
-
-.icon-mobile {
-    font-size: 18px;
-    margin-left: -5px;
-}
-
-.glyphicon-envelope {
-    padding-right: 5px;
-}
-
-// start of styles of skills
-
-// end of styles of skills
