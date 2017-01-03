@@ -4,14 +4,13 @@
         <title>CV</title>
         <meta charset="utf-8">
         <meta content="width=device-width,initial-scale=1" name="viewport">
-        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="/node_modules/lightbox2/dist/css/lightbox.min.css">
         <link rel="stylesheet" type="text/css" href="/app/css/styles.css">
         <link rel="stylesheet" type="text/css" href="/vendor/fontello/css/fontello.css">
+        <link rel="stylesheet" type="text/css" href="/vendor/circliful/css/jquery.circliful.css">
     </head>
     <body data-spy="scroll" data-target="#navbar-example">
         <!-- start of header -->
@@ -70,7 +69,7 @@
         <!-- start of "About me" -->
             <div id="about" class="row active body-page bg-about">
                 <div class="col-xs-10 col-xs-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
-                    <div class="header">
+                    <div class="about">
                         <h2 class="text-center">About me</h2>
                         <p class="text-center">A small introduction about myself</p>
                     </div>
@@ -78,14 +77,17 @@
                 <div class="col-xs-10 col-xs-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <h2>Damian Zieliński <small>Draftsman, Designer, Webdeveloper</small></h2>
+                            <div class="about">
+                                <h2>Damian Zieliński <span class="hidden-xs">Draftsman, Designer, Webdeveloper</span></h2>
+                                <span class="hidden-lg hidden-md hidden-sm">Draftsman, Designer, Webdeveloper</span>
+                            </div>
                         </div>
-                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <div class="col-xs-6 col-xs-offset-3 col-sm-6 col-sm-offset-3 col-md-3 col-md-offset-0 col-lg-3 col-lg-offset-0">
                             <a class="example-image-link" href="/app/images/name.jpg" data-lightbox="example-1" data-title="My sign">
-                                <img class="img-responsive example-image" src="/app/images/name.jpg" alt="image-1">
+                                <img class="img-responsive img-circle example-image" src="/app/images/name-circle.jpg" alt="image-1">
                             </a>
                         </div>
-                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
                             <p>Hi, I am Damian and one of my passion is drawing which is a part of my life. I am also very interested in computer graphics 2D (Gimp) and 3D (Blender, VUE) as well.
                             Recently I started learning programming web applications on the frontend side still to improve my skills in IT. My goal is to became a full stack developer soon.</p>
                         </div>
@@ -94,7 +96,12 @@
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <h2 class="text-center">About my works</h2>
                         </div>
-                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                        <div class="col-xs-6 col-xs-offset-3 col-sm-6 col-sm-offset-3 col-md-3 col-md-offset-0 col-md-push-9 col-lg-3 col-lg-offset-0 col-lg-push-9">
+                            <a class="example-image-link" href="/app/images/my_desk.jpg" data-lightbox="example-2" data-title="On my desk, my works. Drawings and 3D models in 3D.">
+                                <img class="img-responsive img-circle example-image" src="/app/images/my_desk_circle.jpg">
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-9 col-md-pull-3 col-lg-9 col-lg-pull-3">
                             <p>
                                 I have loved drawing since I was a kid and each done work makes me a better draftsman. I did about 200 drawings till now. Among my works is a lot of characters from my favorite movies, for example Transformers or The Universe of Marvel.
                             </p>
@@ -116,11 +123,6 @@
                                 All my frontend work I did till now you can see on my Bitbucket and Github accounts.
                             </p>
                         </div>
-                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                            <a class="example-image-link" href="/app/images/my_desk.jpg" data-lightbox="example-2" data-title="On my desk, my works. Drawings and 3D models in 3D.">
-                                <img class="img-responsive example-image" src="/app/images/my_desk.jpg">
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -140,10 +142,10 @@
                 </div>
                 <div class="col-xs-10 col-xs-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
                     <div class="row">
-                        <div class="col-xs-3 col-lg-3 text-right">
+                        <div class="col-xs-4 col-xs-offset-0 col-lg-3 col-lg-offset-3 text-left">
                             <p>2011 - 2013</p>
                         </div>
-                        <div class="col-xs-9 col-lg-9 text-center">
+                        <div class="col-xs-8 col-lg-6">
                             <h3>Liceum Profilowane Nr XVII we Wrocławiu</h3>
                         </div>
                     </div>
@@ -156,103 +158,33 @@
                     <h2>My Skills</h2>
                     <p>My practical skills and knowledge</p>
                 </div>
-                <div class="col-xs-10 col-xs-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+                <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
                     <div class="row well well-lg">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center well">
                             <h3>Designer</h3>
                         </div>
-                        <div class="col-xs-10 col-xs-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
-                            <div class="row skill-progress">
-                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                                    <h4>Gimp</h4>
-                                </div>
-                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"> 50%
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                                    <p>50%</p>
-                                </div>
-                            </div>
-                            <div class="row skill-progress">
-                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                                    <h4>Blender</h4>
-                                </div>
-                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"> 60%
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                                    <p>60%</p>
-                                </div>
-                            </div>
+                        <div class="col-xs-12 col-xs-offset-0 col-sm-3 col-sm-offset-3 col-lg-3 col-lg-offset-3">
+                            <div id="gimp"></div>
+                        </div>
+                        <div class="col-xs-12 col-xs-offset-0 col-sm-3 col-sm-offset-0 col-lg-3 col-lg-offset-0">
+                            <div id="blender"></div>
                         </div>
                     </div>
                     <div class="row well well-lg">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center well">
                             <h3>Programer</h3>
                         </div>
-                        <div class="col-xs-10 col-xs-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
-                            <div class="row skill-progress">
-                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                                    <h4>HTML</h4>
-                                </div>
-                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"> 50%
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                                    <p>50%</p>
-                                </div>
-                            </div>
-                            <div class="row skill-progress">
-                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                                    <h4>CSS</h4>
-                                </div>
-                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"> 50%
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                                    <p>50%</p>
-                                </div>
-                            </div>
-                            <div class="row skill-progress">
-                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                                    <h4>JavaScript</h4>
-                                </div>
-                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"> 50%
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                                    <p>50%</p>
-                                </div>
-                            </div>
-                            <div class="row skill-progress">
-                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                                    <h4>jQuery</h4>
-                                </div>
-                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"> 50%
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                                    <p>50%</p>
-                                </div>
-                            </div>
+                        <div class="col-xs-12 col-xs-offset-0 col-sm-3 col-sm-offset-0 col-lg-3 col-lg-offset-0">
+                            <div id="html"></div>
+                        </div>
+                        <div class="col-xs-12 col-xs-offset-0 col-sm-3 col-sm-offset-0 col-lg-3 col-lg-offset-0">
+                            <div id="css"></div>
+                        </div>
+                        <div class="col-xs-12 col-xs-offset-0 col-sm-3 col-sm-offset-0 col-lg-3 col-lg-offset-0">
+                            <div id="javascript"></div>
+                        </div>
+                        <div class="col-xs-12 col-xs-offset-0 col-sm-3 col-sm-offset-0 col-lg-3 col-lg-offset-0">
+                            <div id="jquery"></div>
                         </div>
                     </div>
                 </div>
@@ -281,84 +213,84 @@
                     <div class="row img-drawings">
                         <div class="col-xs-12 col-md-4 col-lg-3">
                             <a class="example-image-link" href="/app/images/iron_man.jpg" data-lightbox="example-set" data-title="Iron Man - Avengers Age of Ultron">
-                                <img class="img-responsive thumbnail example-image" src="/app/images/iron_man.jpg">
+                                <img class="img-responsive example-image" src="/app/images/iron_man.jpg">
                             </a>
                         </div>
                         <div class="col-xs-12 col-md-4 col-lg-3">
                             <a class="example-image-link" href="/app/images/lion.jpg" data-lightbox="example-set" data-title="Lion Heart - wallpaper">
-                                <img class="img-responsive thumbnail example-image" src="/app/images/lion.jpg">
+                                <img class="img-responsive example-image" src="/app/images/lion.jpg">
                             </a>
                         </div>
                         <div class="col-xs-12 col-md-4 col-lg-3">
                             <a class="example-image-link" href="/app/images/grimlock.jpg" data-lightbox="example-set" data-title="Grimlock - Transformers Age of Extinction">
-                                <img class="img-responsive thumbnail example-image" src="/app/images/grimlock.jpg">
+                                <img class="img-responsive example-image" src="/app/images/grimlock.jpg">
                             </a>
                         </div>
                         <div class="col-xs-12 col-md-4 col-lg-3">
                             <a class="example-image-link" href="/app/images/optimus.jpg" data-lightbox="example-set" data-title="Optimus Prime - Transformers Age of Extinction">
-                                <img class="img-responsive thumbnail example-image" src="/app/images/optimus.jpg">
+                                <img class="img-responsive example-image" src="/app/images/optimus.jpg">
                             </a>
                         </div>
                         <div class="col-xs-12 col-md-4 col-lg-3">
                             <a class="example-image-link" href="/app/images/bee.jpg" data-lightbox="example-set" data-title="Bumblebee - Transformers Dark of the Moon">
-                                <img class="img-responsive thumbnail example-image" src="/app/images/bee.jpg">
+                                <img class="img-responsive example-image" src="/app/images/bee.jpg">
                             </a>
                         </div>
                         <div class="col-xs-12 col-md-4 col-lg-3">
                             <a class="example-image-link" href="/app/images/lockdown.jpg" data-lightbox="example-set" data-title="Lockdown 'Lamborghini Aventador' - Transformers Age of Extinction">
-                                <img class="img-responsive thumbnail example-image" src="/app/images/lockdown.jpg">
+                                <img class="img-responsive example-image" src="/app/images/lockdown.jpg">
                             </a>
                         </div>
                         <div class="col-xs-12 col-md-4 col-lg-3">
                             <a class="example-image-link" href="/app/images/stinger.jpg" data-lightbox="example-set" data-title="Stinger - Transformers Age of Extinction">
-                                <img class="img-responsive thumbnail example-image" src="/app/images/stinger.jpg">
+                                <img class="img-responsive example-image" src="/app/images/stinger.jpg">
                             </a>
                         </div>
                         <div class="col-xs-12 col-md-4 col-lg-3">
                             <a class="example-image-link" href="/app/images/iron_man_bw.jpg" data-lightbox="example-set" data-title="Iron Man">
-                                <img class="img-responsive thumbnail example-image" src="/app/images/iron_man_bw.jpg">
+                                <img class="img-responsive example-image" src="/app/images/iron_man_bw.jpg">
                             </a>
                         </div>
                     </div>
                     <div class="row img-renders hide">
                         <div class="col-xs-12 col-md-4 col-lg-3">
                             <a class="example-image-link" href="/app/images/camaro_3d.jpg" data-lightbox="example-set" data-title="Chevrolet Camaro 2008">
-                                <img class="img-responsive thumbnail example-image" src="/app/images/camaro_3d.jpg">
+                                <img class="img-responsive example-image" src="/app/images/camaro_3d.jpg">
                             </a>
                         </div>
                         <div class="col-xs-12 col-md-4 col-lg-3">
                             <a class="example-image-link" href="/app/images/magic_forest.jpg" data-lightbox="example-set" data-title="Thomas in The Magic Forest">
-                                <img class="img-responsive thumbnail example-image" src="/app/images/magic_forest.jpg">
+                                <img class="img-responsive example-image" src="/app/images/magic_forest.jpg">
                             </a>
                         </div>
                         <div class="col-xs-12 col-md-4 col-lg-3">
                             <a class="example-image-link" href="/app/images/bathroom.jpg" data-lightbox="example-set" data-title="Someone in the darkness">
-                                <img class="img-responsive thumbnail example-image" src="/app/images/bathroom.jpg">
+                                <img class="img-responsive example-image" src="/app/images/bathroom.jpg">
                             </a>
                         </div>
                         <div class="col-xs-12 col-md-4 col-lg-3">
                             <a class="example-image-link" href="/app/images/camaro_bridge.jpg" data-lightbox="example-set" data-title="Camaro on the bridge">
-                                <img class="img-responsive thumbnail example-image" src="/app/images/camaro_bridge.jpg">
+                                <img class="img-responsive example-image" src="/app/images/camaro_bridge.jpg">
                             </a>
                         </div>
                         <div class="col-xs-12 col-md-4 col-lg-3">
                             <a class="example-image-link" href="/app/images/mjolinir.jpg" data-lightbox="example-set" data-title="Mjolnir - The Hammer of Thor">
-                                <img class="img-responsive thumbnail example-image" src="/app/images/mjolinir.jpg">
+                                <img class="img-responsive example-image" src="/app/images/mjolinir.jpg">
                             </a>
                         </div>
                         <div class="col-xs-12 col-md-4 col-lg-3">
                             <a class="example-image-link" href="/app/images/shield.jpg" data-lightbox="example-set" data-title="Shield of Captain America">
-                                <img class="img-responsive thumbnail example-image" src="/app/images/shield.jpg">
+                                <img class="img-responsive example-image" src="/app/images/shield.jpg">
                             </a>
                         </div>
                         <div class="col-xs-12 col-md-4 col-lg-3">
                             <a class="example-image-link" href="/app/images/Jellfish.jpg" data-lightbox="example-set" data-title="Jellyfish">
-                                <img class="img-responsive thumbnail example-image" src="/app/images/Jellfish.jpg">
+                                <img class="img-responsive example-image" src="/app/images/Jellfish.jpg">
                             </a>
                         </div>
                         <div class="col-xs-12 col-md-4 col-lg-3">
                             <a class="example-image-link" href="/app/images/ink_drop.jpg" data-lightbox="example-set" data-title="INK-drop">
-                                <img class="img-responsive thumbnail example-image" src="/app/images/ink_drop.jpg">
+                                <img class="img-responsive example-image" src="/app/images/ink_drop.jpg">
                             </a>
                         </div>
                     </div>
@@ -444,7 +376,7 @@
                                 <button class="btn btn-primary app-btn-contact">Show contact</button>
                             </address>
                         </div>
-                        <div class="col-xs-12 col-xs-offset-0 col-sm-12 col-sm-offset-0 col-md-6 col-md-offset-1 col-lg-6 col-lg-offset-1">
+                        <div class="col-xs-12 col-xs-offset-0 col-sm-8 col-sm-offset-0 col-md-6 col-md-offset-1 col-lg-6 col-lg-offset-1">
                             <h2>Shoot a Message!</h2>
                             <form class="form-horizontal">
                                 <div class="form-group">
@@ -508,6 +440,7 @@
         <script src="/node_modules/jquery/dist/jquery.min.js"></script>
         <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="/node_modules/lightbox2/dist/js/lightbox.js"></script>
+        <script src="/vendor/circliful/js/jquery.circliful.js"></script>
         <script src="/app/js/cv.js"></script>
     </body>
 </html>

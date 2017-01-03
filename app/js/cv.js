@@ -11,7 +11,9 @@ $(function() {
         }
     });
 
-    $('body').scrollspy({ target: '#navbar-example' });
+    $('body').scrollspy({
+        target: '#navbar-example'
+    });
 
     var $draw = $('.img-drawings');
     var $render = $('.img-renders');
@@ -75,5 +77,65 @@ $(function() {
     $('#myTabs a').click(function(e) {
         e.preventDefault();
         $(this).tab('show');
+    });
+
+    $("#gimp").circliful({
+        animationStep: 5,
+        foregroundBorderWidth: 15,
+        backgroundBorderWidth: 15,
+        percent: 50,
+        iconPosition: 'middle',
+        text: 'Gimp',
+        textBelow: true
+    });
+
+    $("#blender").circliful({
+        animationStep: 5,
+        foregroundBorderWidth: 15,
+        backgroundBorderWidth: 15,
+        percent: 60,
+        iconPosition: 'middle',
+        text: 'Blender',
+        textBelow: true
+    });
+
+    $("#html").circliful({
+        animationStep: 5,
+        foregroundBorderWidth: 15,
+        backgroundBorderWidth: 15,
+        percent: 60,
+        iconPosition: 'middle',
+        text: 'HTML',
+        textBelow: true
+    });
+
+    $("#css").circliful({
+        animationStep: 5,
+        foregroundBorderWidth: 15,
+        backgroundBorderWidth: 15,
+        percent: 60,
+        iconPosition: 'middle',
+        text: 'CSS',
+        textBelow: true
+    });
+
+    $("#javascript").circliful({
+        animationStep: 5,
+        foregroundBorderWidth: 15,
+        backgroundBorderWidth: 15,
+        percent: 40,
+        iconPosition: 'middle',
+        text: 'JavaScript',
+        textBelow: true
+    });
+
+    $("#jquery").circliful({
+        animationStep: 5,
+        foregroundBorderWidth: 15,
+        backgroundBorderWidth: 15,
+        percent: 50,
+        iconPosition: 'middle',
+        text: 'jQuery',
+        textBelow: true
     });
 });

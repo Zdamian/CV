@@ -1,8 +1,25 @@
 @import 'mixins/css3mixins';
+@import 'mixins/rwd';
 @import 'variables';
 
 body {
     position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    font-size: 42px;
+    font-weight: 300;
+}
+
+h3 {
+    margin-top: 0px;
+    font-weight: 100;
+}
+
+p {
+    font-size: 24px;
+    font-weight: 100;
 }
 
 .well, .jumbotron {
@@ -19,10 +36,6 @@ body {
     width: 260px;
     border-radius: 50%;
     margin-top: 15px;
-}
-
-.img-about {
-    margin-top: 20px;
 }
 
 #Container {
@@ -60,6 +73,7 @@ body {
 .nav-pills li a:hover {
     background-color: #333;
     border-radius: 0;
+    transition: background-color 0.5s;
 }
 
 .nav-pills li.active a, .nav-pills li.active a:focus, .nav-pills li.active a:hover {
@@ -72,7 +86,6 @@ body {
     width: auto;
 
     h1 {
-        font-family: 'Pacifico', cursive;
         color: white;
         text-shadow: 6px 6px 5px rgba(0, 0, 0, 0.9);
     }
@@ -89,54 +102,48 @@ body {
     min-height: 40px;
 
     a {
-       font-family: 'Roboto', sans-serif;
+       font-weight: 100;
        color: white;
        font-size: 18px; 
     }
 }
 
-h2, h3 {
-    font-family: 'Roboto', sans-serif;
-}
-
-h3 {
-    margin-top: 0px;
-}
-
-p {
-    font-family: 'Roboto', sans-serif;
-}
-
 .bg-about {
     background-color: $backgroundAbout;
+    color: white;
 
-    .header {
+    .img-circle {
+        border: 3px solid white;
+        margin-bottom: 20px;
+    }
+
+    .about {
         margin-bottom: 50px;
 
         h2 {
             margin-bottom: 10px;
         }
-    }
 
-    h2, p {
-        font-family: 'Roboto', sans-serif;
-        color: white;
+        p, span {
+
+            @include respond-to(xl) {
+                font-size: 18px;
+            }
+        }
     }
 
     h2 {
-        font-size: 42px;
         margin-bottom: 50px;
+
+        @include respond-to(xl) {
+            font-size: 32px;
+        }
     }
 
-    h2 small {
+    span {
         font-size: 18px;
         color: white;
-    }
-
-    p {
-        font-size: 24px;
         font-weight: 100;
-        color: white;
     }
 }
 
@@ -144,55 +151,100 @@ p {
     background-color: #f5f5f5;
 
     h2 {
-        font-weight: 600;
+        @include respond-to(xl) {
+            font-size: 38px;
+        }
     }
 
     p {
-        font-weight: 400;
+        font-weight: 300;
         font-size: 24px;
+        color: #666;
+    }
+}
+
+.bg-work p {
+
+    @include respond-to(xl) {
+        font-size: 18px;
     }
 }
 
 .bg-education {
     background-color: $backgroundEduPort;
-
-    h3, h2, p {
-        color: white;
-    }
+    color: white;
 
     h2 {
         margin-bottom: 50px;
-        font-weight: 600;
+
+        @include respond-to(xl) {
+            font-size: 38px;
+        }
     }
 
     p {
         font-size: 18px;
+
+        @include respond-to(xl) {
+            font-size: 14px;
+        }
+    }
+
+    h3 {
+        @include respond-to(xl) {
+            font-size: 18px;
+        }
     }
 }
 
 .bg-skills {
 
+    p {
+        @include respond-to(xl) {
+            font-size: 14px;
+        }
+    }
+
     h3 {
         font-weight: 400;
+
+        @include respond-to(xl) {
+            font-size: 22px;
+        }
     }
 }
 
 .bg-portfolio {
     background-color: $backgroundAbout;
-
-    h2, p {
-        color: white;
-        font-family: 'Open Sans', sans-serif;
-    }
+    color: white;
 
     h2 {
-        font-weight: 600;
+        @include respond-to(xl) {
+            font-size: 38px;
+        }
     }
 
-    .thumbnail {
-        background: none;
+    p {
+        @include respond-to(xl) {
+            font-size: 14px;
+        }
+    }
+
+    img {
+        margin-bottom: 25px;
+
+        &:hover {
+            box-shadow: 0 0 16px rgba(0,0,0,.9);
+            transition: box-shadow 0.5s;
+        }
+    }
+
+    .img-animations .panel-default {
         border-radius: 0;
-        border: none;
+
+        .panel-heading {
+            font-size: 16px;
+        }
     }
 }
 
@@ -200,13 +252,16 @@ p {
     background-color: #15596e !important;
     border-color: #15596e;
     color: white !important;
+
 }
 
 .bg-contact {
     background-color: #f5f5f5;
 
     h2 {
-        font-weight: 600;
+        @include respond-to(xl) {
+            font-size: 32px;
+        }
     }
 
     p, label {
@@ -226,33 +281,33 @@ p {
             background-color: #15596e;
             border-radius: 0;
             border-color: #15596e;
+            transition: all 0.7s;
         }
-    }
-}
-
-.skill-progress {
-
-    .progress {
-        margin-top: 10px;
-    }
-
-    p {
-        margin: 10px 0 10px;
     }
 }
 
 .btn-group-justified {
 
+    .btn-group .btn {
+        width: 98%;
+    }
+
     button {
-        font-family: 'Roboto Slab', serif;
         background-color: $backgroundAbout;
         color: white;
         font-size: 18px;
+        font-weight: 300;
+        border-radius: 0;
+
+        @include respond-to(xl) {
+            font-size: 12px;
+        }
 
         &:hover {
             color: #15596e;
             border-color: #15596e;
             background: none;
+            transition: all 0.7s;
         } 
     }
 }
@@ -273,6 +328,7 @@ address {
 
 footer {
     background-color: $backgroundFooterNavbar;
+    color: white;
 
     i {
         color: white;
@@ -280,14 +336,14 @@ footer {
 
         &:hover {
             font-size: 21px;
+            transition: font-size 0.1s;
         }
     }
 
     p {
-       font-family: 'Roboto Slab', serif;
-       color: white;
        border-top: 1px solid #222;
        padding-top: 15px;
+       font-size: 14px;
     }
 
     .bg-icon {
@@ -297,26 +353,32 @@ footer {
 
     .icon-github:hover {
         color: #444;
+        transition: all 0.7s;
     }
 
     .icon-bitbucket:hover {
         color: #093654;
+        transition: all 0.7s;
     }
 
     .icon-facebook:hover {
         color: #3b5998;
+        transition: all 0.7s;
     }
 
     .icon-youtube:hover {
         color: #C63619;
+        transition: all 0.7s;
     }
 
     .icon-deviantart:hover {
         color: green;
+        transition: all 0.7s;
     }
 
     .icon-cube:hover {
         color: #133783;
+        transition: all 0.7s;
     }
 }
 
@@ -328,3 +390,7 @@ footer {
 .glyphicon-envelope {
     padding-right: 5px;
 }
+
+// start of styles of skills
+
+// end of styles of skills
