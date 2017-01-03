@@ -3,16 +3,17 @@
     <head>
         <title>CV</title>
         <meta charset="utf-8">
+        <meta content="width=device-width,initial-scale=1" name="viewport">
         <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="/node_modules/lightbox2/dist/css/lightbox.min.css">
         <link rel="stylesheet" type="text/css" href="/app/css/styles.css">
         <link rel="stylesheet" type="text/css" href="/vendor/fontello/css/fontello.css">
     </head>
-    <body>
+    <body data-spy="scroll" data-target="#navbar-example">
         <!-- start of header -->
         <header class="business-header">
             <div id="Container" class="container">
@@ -35,39 +36,39 @@
         </header>
         <!-- end of header -->
         <!-- start of menu -->
-        <nav class="navbar navbar-inverse" role="navigation">
+        <nav id="navbar-example" class="navbar navbar-inverse navbar-static-top" role="navigation">
             <div class="container">
-                <div class="navbar-header">
+                 <div class="navbar-header">
                   <button type="button" class="navbar-toggle text-center" data-toggle="collapse" data-target=".navbar-collapse">Menu</button>
                 </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav nav-pills nav-justified" id="myTabs" role="tablist">
-                        <li role="presentation" class="active">
-                            <a href="#about" aria-controls="about" role="tab" data-toggle="tab">About</a>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav nav-pills nav-justified" role="tablist">
+                        <li role="presentation">
+                            <a href="#about">About</a>
                         </li>
                         <li role="presentation">
-                            <a href="#work" aria-controls="work" role="tab" data-toggle="tab">Work</a>
+                            <a href="#work">Work</a>
                         </li>
                         <li role="presentation">
-                            <a href="#education" aria-controls="education" role="tab" data-toggle="tab">Education</a>
+                            <a href="#education">Education</a>
                         </li>
                         <li role="presentation">
-                            <a href="#skills" aria-controls="skills" role="tab" data-toggle="tab">Skills</a>
+                            <a href="#skills">Skills</a>
                         </li>
                         <li role="presentation">
-                            <a href="#portfolio" aria-controls="portfolio" role="tab" data-toggle="tab">Portfolio</a>
+                            <a href="#portfolio">Portfolio</a>
                         </li>
                         <li role="presentation">
-                            <a href="#contact" aria-controls="contact" role="tab" data-toggle="tab">Contact</a>
+                            <a href="#contact">Contact</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- end of menu -->
-        <div class="container-fluid"> <!-- tab-content -->
+        <div class="container-fluid">
         <!-- start of "About me" -->
-            <div role="tabpanel" id="about" class="row tab-pane active body-page bg-about">
+            <div id="about" class="row active body-page bg-about">
                 <div class="col-xs-10 col-xs-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
                     <div class="header">
                         <h2 class="text-center">About me</h2>
@@ -100,22 +101,20 @@
                             <p>
                                 To do much realistic pics I began creating 3D models in Blender including animations. One of them you can see at the top of this page as a background. Others my best models are in Portfolio sections.
                             </p>
-                            <div class="about-programer">
-                                <p>
-                                    Currently I am HTML, CSS and JavaScript learner. From this trio I am the best familiar with HTML and CSS. I create styles using SCSS preprocessor.
-                                    Up to now I did a lot of responsiveness mock templates using my own layout grid written in SCSS and Bootstrap and Zurb Foundation frameworks as well.
-                                </p>
-                                <p>
-                                    I am still learning JavaScript language. I have written about hundred small functions including a few unit tests for each. I am learning programming using Test Driven Development approach to make my code better. For unit tests I use Jasmine framework. I wrote a small ToDo app in vanilla javascript as well using Model-View-Controller pattern.
-                                </p>
-                                <p>
-                                    I really like jQuery library. It is much simpler to me to make my website dynamic than using vanilla js.
-                                    I work with Git version control system. For each part of code I need to implement I create a new branch and then open a pull request to merge it into master or rc (release candidate) branch.
-                                </p>
-                                <p>
-                                    All my frontend work I did till now you can see on my Bitbucket and Github accounts.
-                                </p>
-                            </div>
+                            <p>
+                                Currently I am HTML, CSS and JavaScript learner. From this trio I am the best familiar with HTML and CSS. I create styles using SCSS preprocessor.
+                                Up to now I did a lot of responsiveness mock templates using my own layout grid written in SCSS and Bootstrap and Zurb Foundation frameworks as well.
+                            </p>
+                            <p>
+                                I am still learning JavaScript language. I have written about hundred small functions including a few unit tests for each. I am learning programming using Test Driven Development approach to make my code better. For unit tests I use Jasmine framework. I wrote a small ToDo app in vanilla javascript as well using Model-View-Controller pattern.
+                            </p>
+                            <p>
+                                I really like jQuery library. It is much simpler to me to make my website dynamic than using vanilla js.
+                                I work with Git version control system. For each part of code I need to implement I create a new branch and then open a pull request to merge it into master or rc (release candidate) branch.
+                            </p>
+                            <p>
+                                All my frontend work I did till now you can see on my Bitbucket and Github accounts.
+                            </p>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                             <a class="example-image-link" href="/app/images/my_desk.jpg" data-lightbox="example-2" data-title="On my desk, my works. Drawings and 3D models in 3D.">
@@ -127,7 +126,7 @@
             </div>
         <!-- end of "About me" -->
         <!-- start of "Work" -->
-            <div role="tabpanel" id="work" class="row tab-pane body-page bg-work">
+            <div id="work" class="row body-page bg-work">
                 <div class="col-xs-10 col-xs-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 text-center">
                     <h2>My Work</h2>
                     <p>I am a novice programmer and I do not have any commercial experience. However, I have written a lot of code you can see on my Bitbucket and Github accounts.</p>
@@ -135,7 +134,7 @@
             </div>
         <!-- end of "Work" -->
         <!-- start of "Education" -->
-            <div role="tabpanel" id="education" class="row tab-pane body-page bg-education">
+            <div id="education" class="row body-page bg-education">
                 <div class="col-xs-10 col-xs-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
                     <h2 class="text-center">My Education</h2>
                 </div>
@@ -152,7 +151,7 @@
             </div>
         <!-- end of "Education" -->
         <!-- start of "My Skills" -->
-            <div role="tabpanel" id="skills" class="row tab-pane body-page bg-skills">
+            <div id="skills" class="row body-page bg-skills">
                 <div class="col-xs-10 col-xs-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 text-center">
                     <h2>My Skills</h2>
                     <p>My practical skills and knowledge</p>
@@ -260,7 +259,7 @@
             </div>
         <!-- end of "My Skills" -->
         <!-- start of "Portfolio" -->
-            <div role="tabpanel" id="portfolio" class="row tab-pane body-page bg-portfolio">
+            <div id="portfolio" class="row body-page bg-portfolio">
                 <div class="col-xs-10 col-xs-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 text-center">
                    <h2>Portfolio</h2>
                    <p>Showcase of my latest works</p>
@@ -429,7 +428,7 @@
             </div>
         <!-- end of "Portfolio" -->
         <!-- start of "Contact" -->
-            <div role="tabpanel" id="contact" class="row tab-pane body-page bg-contact">
+            <div id="contact" class="row body-page bg-contact">
                 <div class="col-xs-10 col-xs-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
                     <div class="row">
                         <div class="col-xs-12 col-xs-offset-0 col-sm-12 col-sm-offset-0 col-md-5 col-md-offset-0 col-lg-5 col-lg-offset-0">

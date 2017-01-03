@@ -1,5 +1,18 @@
 $(function() {
 
+    $(document).scroll(function(e) {
+
+        var scrollTop = $(document).scrollTop();
+
+        if (scrollTop > 693) {
+            $('.navbar').removeClass('navbar-static-top').addClass('navbar-fixed-top');
+        } else {
+            $('.navbar').removeClass('navbar-fixed-top').addClass('navbar-static-top');
+        }
+    });
+
+    $('body').scrollspy({ target: '#navbar-example' });
+
     var $draw = $('.img-drawings');
     var $render = $('.img-renders');
     var $animation = $('.img-animations');
@@ -9,7 +22,7 @@ $(function() {
 
     var $video = $('.video');
 
-    $btnRender.on('click',function() {
+    $btnRender.on('click', function() {
 
         $(this).addClass('active-btn-portfolio');
         $btnDraw.removeClass('active-btn-portfolio');
@@ -21,7 +34,7 @@ $(function() {
 
     });
 
-    $btnDraw.on('click',function() {
+    $btnDraw.on('click', function() {
 
         $(this).addClass('active-btn-portfolio');
         $btnRender.removeClass('active-btn-portfolio');
@@ -33,7 +46,7 @@ $(function() {
 
     });
 
-    $btnAnimations.on('click',function() {
+    $btnAnimations.on('click', function() {
 
         $(this).addClass('active-btn-portfolio');
         $btnDraw.removeClass('active-btn-portfolio');
@@ -43,11 +56,6 @@ $(function() {
         $draw.addClass('hide');
         $animation.removeClass('hide')
 
-    });
-
-    $('#myTabs a').click(function(e) {
-        e.preventDefault();
-        $(this).tab('show');
     });
 
     $('.app-btn-contact').on('click', function() {
@@ -62,5 +70,10 @@ $(function() {
             }
         });
 
+    });
+
+    $('#myTabs a').click(function(e) {
+        e.preventDefault();
+        $(this).tab('show');
     });
 });
