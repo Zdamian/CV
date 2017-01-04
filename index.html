@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="/node_modules/lightbox2/dist/css/lightbox.min.css">
         <link rel="stylesheet" type="text/css" href="/app/css/styles.css">
         <link rel="stylesheet" type="text/css" href="/vendor/fontello/css/fontello.css">
-        <link rel="stylesheet" type="text/css" href="/vendor/circliful/css/jquery.circliful.css">
+        <link rel="stylesheet" href="/vendor/aspieProgress/dist/css/asPieProgress.css">
     </head>
     <body data-spy="scroll" data-target="#navbar-example">
         <!-- start of header -->
@@ -158,16 +158,22 @@
                     <h2>My Skills</h2>
                     <p>My practical skills and knowledge</p>
                 </div>
-                <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+                <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 skill">
                     <div class="row well well-lg">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center well">
                             <h3>Designer</h3>
                         </div>
                         <div class="col-xs-12 col-xs-offset-0 col-sm-3 col-sm-offset-3 col-lg-3 col-lg-offset-3">
-                            <div id="gimp"></div>
+                            <div class="pie_progress" role="progressbar" data-goal="40">
+                                <div class="pie_progress__number">0%</div>
+                                <div class="pie_progress__label">Gimp</div>
+                            </div>
                         </div>
                         <div class="col-xs-12 col-xs-offset-0 col-sm-3 col-sm-offset-0 col-lg-3 col-lg-offset-0">
-                            <div id="blender"></div>
+                            <div class="pie_progress" role="progressbar" data-goal="60">
+                                <div class="pie_progress__number">0%</div>
+                                <div class="pie_progress__label">Blender</div>
+                            </div>
                         </div>
                     </div>
                     <div class="row well well-lg">
@@ -175,16 +181,28 @@
                             <h3>Programer</h3>
                         </div>
                         <div class="col-xs-12 col-xs-offset-0 col-sm-3 col-sm-offset-0 col-lg-3 col-lg-offset-0">
-                            <div id="html"></div>
+                            <div class="pie_progress" role="progressbar" data-goal="60">
+                                <div class="pie_progress__number">0%</div>
+                                <div class="pie_progress__label">HTML</div>
+                            </div>
                         </div>
                         <div class="col-xs-12 col-xs-offset-0 col-sm-3 col-sm-offset-0 col-lg-3 col-lg-offset-0">
-                            <div id="css"></div>
+                            <div class="pie_progress" role="progressbar" data-goal="60">
+                                <div class="pie_progress__number">0%</div>
+                                <div class="pie_progress__label">CSS</div>
+                            </div>
                         </div>
                         <div class="col-xs-12 col-xs-offset-0 col-sm-3 col-sm-offset-0 col-lg-3 col-lg-offset-0">
-                            <div id="javascript"></div>
+                            <div class="pie_progress" role="progressbar" data-goal="40">
+                                <div class="pie_progress__number">0%</div>
+                                <div class="pie_progress__label">JavaScript</div>
+                            </div>
                         </div>
                         <div class="col-xs-12 col-xs-offset-0 col-sm-3 col-sm-offset-0 col-lg-3 col-lg-offset-0">
-                            <div id="jquery"></div>
+                            <div class="pie_progress" role="progressbar" data-goal="40">
+                                <div class="pie_progress__number">0%</div>
+                                <div class="pie_progress__label">jQuery</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -440,7 +458,7 @@
         <script src="/node_modules/jquery/dist/jquery.min.js"></script>
         <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="/node_modules/lightbox2/dist/js/lightbox.js"></script>
-        <script src="/vendor/circliful/js/jquery.circliful.js"></script>
+        <script src="/vendor/asPieProgress/dist/jquery-asPieProgress.js"></script>
         <script src="/app/js/cv.js"></script>
     </body>
 </html>
