@@ -63,6 +63,56 @@ p {
     z-index: -100;
 }
 
+/* Styles go here */
+
+.wrapper {
+  margin: 20px auto;
+  position: relative;
+}
+
+.card video {
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 98%;
+  background: rgba(0,0,0,0.2);
+
+  @include respond-to(xl) {
+        height: 97%;
+    }
+}
+
+.overlay .icon span {
+    display: none;
+    position: absolute;
+    top: 45%;
+    left: 47%;
+    margin-top: -45px;
+    margin-left: -45px;
+    width: 90px;
+    height: 90px;
+    cursor: pointer;
+}
+
+.overlay:hover {
+  background: rgba(0,0,0,0.4);
+}
+
+.overlay:hover .icon span {
+    display: block;
+}
+
+.glyphicon-play-circle {
+    font-size: 120px;
+}
+
 .active-btn-portfolio {
     background-color: #15596e !important;
     border-color: #15596e;

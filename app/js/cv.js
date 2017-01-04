@@ -126,7 +126,11 @@ $(function() {
             //check to see if this current container is within viewport
             if ((element_bottom_position >= window_top_position) &&
                 (element_top_position <= window_bottom_position)) {
-                $('.pie_progress').asPieProgress('start');
+
+                setTimeout(function() {
+                    $('.pie_progress').asPieProgress('start');
+                }, 1000);
+
             } else {
                 $('.pie_progress').asPieProgress('stop');
             }
@@ -136,11 +140,10 @@ $(function() {
     $window.on('scroll resize', check_if_in_view);
     $window.trigger('scroll');
 
-    $('.thumbnail').on('click', function() {
-        var $srcVideo = $(this).find('source').attr('src');
-        $(this).addClass('hide');
-        var $mainVideo = $(this).parent().find('.mainVideo');
-        $mainVideo.removeClass('hide');
-        $mainVideo.attr('src', $srcVideo);
+    $('.icon').on('click', function() {
+        $(this).parent('.overlay').addClass('hide');
+        var $autoplay = $(this).parent('.overlay').prev().find('video');
+        $autoplay.attr('controls', 'controls')
+        $autoplay.get(0).play();
     });
 });
