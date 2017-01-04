@@ -142,8 +142,9 @@ $(function() {
 
     $('.icon').on('click', function() {
         $(this).parent('.overlay').addClass('hide');
+        $(this).parent('.overlay').parent('.wrapper').find('.overlay-title').addClass('hide');
         var $autoplay = $(this).parent('.overlay').prev().find('video');
-        $autoplay.attr('controls', 'controls')
+        $autoplay.attr('controls', 'controls');
         $autoplay.get(0).play();
     });
 });

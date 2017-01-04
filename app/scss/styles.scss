@@ -63,8 +63,6 @@ p {
     z-index: -100;
 }
 
-/* Styles go here */
-
 .wrapper {
   margin: 20px auto;
   position: relative;
@@ -87,6 +85,16 @@ p {
   @include respond-to(xl) {
         height: 97%;
     }
+}
+
+.overlay-title {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    font-size: 20px;
 }
 
 .overlay .icon span {
@@ -115,9 +123,12 @@ p {
 
 .active-btn-portfolio {
     background-color: #15596e !important;
-    border-color: #15596e;
+    border-color: white;
     color: white !important;
 
+    &:hover {
+        border-color: white;
+    }
 }
 
 .icon-mobile {
@@ -217,22 +228,17 @@ p {
     background-color: #f5f5f5;
 
     .pie_progress {
-        margin: 30px 0;
+        width: 100px;
+        margin: 0 auto;
+        margin-bottom: 25px;
     }
 
     .pie_progress__number {
-
-        @include respond-to(xs) {
-            font-size: 28px;
-        }
+        font-size: 26px
     }
 
     .pie_progress__label {
-
-        @include respond-to(xs) {
-            margin-top: 20px;
-            font-size: 10px;
-        }
+        margin-top: 20px;
     }
 
     h2 {
@@ -269,6 +275,7 @@ p {
 
     p {
         font-size: 18px;
+        font-weight: 300;
 
         @include respond-to(xl) {
             font-size: 14px;
@@ -276,6 +283,8 @@ p {
     }
 
     h3 {
+        font-weight: 300;
+
         @include respond-to(xl) {
             font-size: 18px;
         }
@@ -354,7 +363,7 @@ p {
                 border-color: #15596e;
                 background: none;
                 transition: all 0.7s;
-            } 
+            }
         }
     }
 }
@@ -398,7 +407,7 @@ p {
             color: white;
             background-color: #15596e;
             border-radius: 0;
-            border-color: #15596e;
+            border-color: white;
             transition: all 0.7s;
         }
     }
