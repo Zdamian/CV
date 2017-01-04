@@ -4,20 +4,22 @@
 
 body {
     position: relative;
-    font-family: 'Roboto', sans-serif;
 }
 
 h2 {
+    font-family: 'Roboto', sans-serif;
     font-size: 42px;
     font-weight: 300;
 }
 
 h3 {
+    font-family: 'Roboto', sans-serif;
     margin-top: 0px;
     font-weight: 100;
 }
 
 p {
+    font-family: 'Roboto', sans-serif;
     font-size: 24px;
     font-weight: 100;
 }
@@ -213,7 +215,7 @@ p {
         margin-bottom: 50px;
 
         @include respond-to(xl) {
-            font-size: 32px;
+            font-size: 38px;
         }
     }
 
@@ -242,22 +244,14 @@ p {
     }
 
     h2 {
-        @include respond-to(xl) {
+        @include respond-to(xs) {
             font-size: 38px;
         }
     }
 
     p {
-        font-weight: 300;
         font-size: 24px;
-        color: #666;
-    }
-}
-
-.bg-work p {
-
-    @include respond-to(xl) {
-        font-size: 18px;
+        color: #000;
     }
 }
 
@@ -293,12 +287,6 @@ p {
 
 .bg-skills {
 
-    p {
-        @include respond-to(xl) {
-            font-size: 14px;
-        }
-    }
-
     h3 {
         font-weight: 400;
 
@@ -315,12 +303,6 @@ p {
     h2 {
         @include respond-to(xl) {
             font-size: 38px;
-        }
-    }
-
-    p {
-        @include respond-to(xl) {
-            font-size: 14px;
         }
     }
 
@@ -353,9 +335,10 @@ p {
             font-size: 18px;
             font-weight: 300;
             border-radius: 0;
+            border-color: white;
 
             @include respond-to(xl) {
-                font-size: 12px;
+                font-size: 13px;
             }
 
             &:hover {
@@ -372,6 +355,8 @@ p {
     background-color: #f5f5f5;
 
     h2 {
+        margin-bottom: 35px;
+
         @include respond-to(xl) {
             font-size: 32px;
         }
@@ -402,6 +387,7 @@ p {
         font-size: 18px;
         border-radius: 0;
         border-color: #15596e;
+        margin-top: 20px;
 
         &:hover, &:active, &:focus {
             color: white;
