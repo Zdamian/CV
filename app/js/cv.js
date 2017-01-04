@@ -135,4 +135,12 @@ $(function() {
 
     $window.on('scroll resize', check_if_in_view);
     $window.trigger('scroll');
+
+    $('.thumbnail').on('click', function() {
+        var $srcVideo = $(this).find('source').attr('src');
+        $(this).addClass('hide');
+        var $mainVideo = $(this).parent().find('.mainVideo');
+        $mainVideo.removeClass('hide');
+        $mainVideo.attr('src', $srcVideo);
+    });
 });
